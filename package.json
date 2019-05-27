@@ -11,6 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
+    "mongodb": "^3.2.6",
+    "msql": "^1.0.3",
+    "mysql": "^2.17.1",
     "needle": "^2.4.0",
     "wordpress": "^1.4.1",
     "wpapi": "^1.2.1"
