@@ -1,4 +1,4 @@
-const arrowElement = '←';
+const arrowElement = '→';
 const cheerio = require('cheerio');
 const needle = require('needle');
 const URL = require('url');

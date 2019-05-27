@@ -29,8 +29,9 @@ function appendDataToDatabase(data,callback) {
 }
 
 function closeConnection(){
-    console.log('Connection closed')
-    dbClient.close()
+    dbClient.close(()=>{
+        console.log('Connection closed')
+    })
 }
 
 
