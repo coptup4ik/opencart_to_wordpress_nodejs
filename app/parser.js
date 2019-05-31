@@ -10,7 +10,7 @@ function parser(website) {
     console.log('starting parser');
     needle.get(website, (err, res) => {
         const $ = cheerio.load(res.body, {decodeEntities: false});
-        if (err) return console.log(err) ;
+        if (err) return console.log(err);
 
         let linkToNextPage = $('.blog-next-prev').children().filter(function () {
             return $(this).text().includes(arrowElement)
@@ -27,11 +27,10 @@ function parser(website) {
                 metaKeywords: $('meta[name=keywords]').attr("content")
             }
 
-            appendDataToDatabase(data, ()=>{
+            appendDataToDatabase(data, () => {
                 console.log('One link appended ' + linkToNextPage);
                 parser(encodeURI(linkToNextPage))
             })
-
 
 
         } else {
