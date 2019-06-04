@@ -1,6 +1,6 @@
+let phpScript = `
 <?php
 require(dirname(__FILE__) . '/wp-load.php');
-
 global $user_ID;
 $new_post = array(
 'post_title' => 'Replaced Post',
@@ -16,3 +16,6 @@ $new_post = array(
 );
 $post_id = wp_insert_post($new_post);
 ?>
+`;
+
+

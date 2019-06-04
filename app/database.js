@@ -31,8 +31,23 @@ function appendDataToDatabase(data,callback) {
 function closeConnection(){
     dbClient.close(()=>{
         console.log('Connection closed')
+
     })
 }
 
 
-module.exports = {appendDataToDatabase,initializeDbConnection,closeConnection};
+
+function readDataFromDatabase() {
+    console.log('reading data');
+    collection.find().toArray((err, result) => {
+            if (err) {
+                return console.log(err)
+            }
+            return result
+        }
+    )
+}
+
+
+
+module.exports = {appendDataToDatabase,initializeDbConnection,closeConnection,readDataFromDatabase};

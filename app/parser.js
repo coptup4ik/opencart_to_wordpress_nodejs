@@ -6,7 +6,7 @@ const appendDataToDatabase = require('./database').appendDataToDatabase;
 const closeConnection = require('./database').closeConnection;
 
 
-function parser(website) {
+function parser(website,callback) {
     console.log('starting parser');
     needle.get(website, (err, res) => {
         const $ = cheerio.load(res.body, {decodeEntities: false});
@@ -35,7 +35,8 @@ function parser(website) {
 
         } else {
             console.log('Process is finished');
-            closeConnection()
+            // closeConnection();
+            // callback()
         }
     })
 }
