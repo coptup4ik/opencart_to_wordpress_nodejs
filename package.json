@@ -16,6 +16,7 @@
     "msql": "^1.0.3",
     "mysql": "^2.17.1",
     "needle": "^2.4.0",
+    "sync-foreach": "^1.0.2",
     "wordpress": "^1.4.1",
     "wpapi": "^1.2.1"
   }

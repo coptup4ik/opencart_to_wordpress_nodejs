@@ -31,7 +31,6 @@ function appendDataToDatabase(data,callback) {
 function closeConnection(){
     dbClient.close(()=>{
         console.log('Connection closed')
-
     })
 }
 
@@ -39,13 +38,15 @@ function closeConnection(){
 
 function readDataFromDatabase() {
     console.log('reading data');
-    collection.find().toArray((err, result) => {
-            if (err) {
-                return console.log(err)
+    return  new Promise((resolve,reject) => {
+        collection.find().toArray((err, result) => {
+                if (err) {
+                    reject(err)
+                }
+                resolve(result)
             }
-            return result
-        }
-    )
+        );
+    } )
 }
 
 
