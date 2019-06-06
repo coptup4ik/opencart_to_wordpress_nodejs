@@ -27,7 +27,7 @@ async function createPostsInWordpress(data) {
                         'post_title' => '${data.title}',
                         'post_content' => '${data.content}' ,
                         'post_status' => 'publish',
-                        'post_date' => date('2019-01-01 00:00:00'),
+                        'post_date' => date('${data.dateAdd}'),
                         'post_author' => $user_ID,
                         'post_type' => 'post',
                         'post_category' => array('1'),
