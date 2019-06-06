@@ -37,11 +37,9 @@ async function createPostsInWordpress(data) {
                         );
                         $post_id = wp_insert_post($new_post);
                         ?>
-                        `;
+                        `
+    ;
 
-    fs.writeFileSync(scriptFile, '', (err) => {
-        if (err) return err;
-    });
 
     fs.writeFileSync(scriptFile, phpScript, (err) => {
         if (err) return err;
