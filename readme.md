@@ -1,4 +1,4 @@
-This project was created to copy all data info from Opencart SQL to Wordpress SQL using Node js
+This project was created to copy all data info from Opencart to Wordpress using Node js
 
 1) Parse all data from website.
 2) Load structured parsed data to MongoDB
